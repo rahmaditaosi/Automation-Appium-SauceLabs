@@ -15,12 +15,8 @@ This project demonstrates Android UI automation using **Robot Framework** and **
 
 ## 📁 Project Structure
 
-automation-robot/
-├── apps/ # APKs used for testing
-├── resources/ # Shared variables and reusable keywords
-├── tests/ # Organized test cases
-├── results/ # Test reports
-└── README.md
+![image](https://github.com/user-attachments/assets/168baee8-fecb-4ceb-95de-8311d252e009)
+
 
 
 ---
@@ -66,4 +62,3 @@ Open `results/report.html` in your browser
 ## 👤 Author
 
 Created by **Osi Rahmadita**  
-For demo/testing purposes only. Contributions welcome!
