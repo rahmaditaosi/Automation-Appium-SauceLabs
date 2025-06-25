@@ -1,0 +1,35 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.class
+
+# Robot Framework reports & logs
+output.xml
+log.html
+report.html
+results/
+
+# Appium temp files
+*.apk.uploaded
+
+# VSCode settings (optional)
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python virtual env
+venv/
+.env/
+
+# Node modules (if using Appium plugin locally)
+node_modules/
+
+# GitHub Actions secrets (just to be safe)
+*.env
+
+#Appium Inspector
+*.iml
+.idea/
