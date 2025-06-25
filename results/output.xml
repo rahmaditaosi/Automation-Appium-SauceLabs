@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.13.5 on win32)" generated="20250626 00:20:53.159" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests" source="D:\Osi\Automation-robot\tests">
+<suite id="s1-s1" name="Login" source="D:\Osi\Automation-robot\tests\login">
+<suite id="s1-s1-s1" name="Negative Login" source="D:\Osi\Automation-robot\tests\login\negative_login.robot">
+<test id="s1-s1-s1-t1" name="Login With Invalid Credentials" line="6">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>app=${APP}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>appWaitActivity=*.*</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20250626 00:20:53.324" endtime="20250626 00:21:01.874"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>accessibility_id=test-Username</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20250626 00:21:01.875" endtime="20250626 00:21:03.572"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>accessibility_id=test-Username</arg>
+<arg>wrong_user</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20250626 00:21:03.573" level="INFO">Typing text 'wrong_user' into text field 'accessibility_id=test-Username'</msg>
+<status status="PASS" starttime="20250626 00:21:03.573" endtime="20250626 00:21:04.259"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>accessibility_id=test-Password</arg>
+<arg>wrong_pass</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20250626 00:21:04.260" level="INFO">Typing text 'wrong_pass' into text field 'accessibility_id=test-Password'</msg>
+<status status="PASS" starttime="20250626 00:21:04.259" endtime="20250626 00:21:05.278"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>accessibility_id=test-LOGIN</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20250626 00:21:05.280" level="INFO">Clicking element 'accessibility_id=test-LOGIN'.</msg>
+<status status="PASS" starttime="20250626 00:21:05.279" endtime="20250626 00:21:06.243"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='Username and password do not match any user in this service.']</arg>
+<arg>5s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20250626 00:21:07.376" level="INFO">xpath criteria: //android.widget.TextView[@text='Username and password do not match any user in this service.']</msg>
+<status status="PASS" starttime="20250626 00:21:06.246" endtime="20250626 00:21:07.376"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20250626 00:21:07.405" endtime="20250626 00:21:09.366"/>
+</kw>
+<status status="PASS" starttime="20250626 00:20:53.324" endtime="20250626 00:21:09.367"/>
+</test>
+<test id="s1-s1-s1-t2" name="Login With Blank Username" line="25">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>app=${APP}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>appWaitActivity=*.*</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20250626 00:21:09.368" endtime="20250626 00:21:14.871"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>accessibility_id=test-Password</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20250626 00:21:14.872" endtime="20250626 00:21:15.725"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>accessibility_id=test-Password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20250626 00:21:15.726" level="INFO">Typing text 'secret_sauce' into text field 'accessibility_id=test-Password'</msg>
+<status status="PASS" starttime="20250626 00:21:15.725" endtime="20250626 00:21:15.814"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>accessibility_id=test-LOGIN</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20250626 00:21:15.815" level="INFO">Clicking element 'accessibility_id=test-LOGIN'.</msg>
+<status status="PASS" starttime="20250626 00:21:15.814" endtime="20250626 00:21:16.611"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='Username is required']</arg>
+<arg>5s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20250626 00:21:17.695" level="INFO">xpath criteria: //android.widget.TextView[@text='Username is required']</msg>
+<status status="PASS" starttime="20250626 00:21:16.612" endtime="20250626 00:21:17.696"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20250626 00:21:17.696" endtime="20250626 00:21:18.713"/>
+</kw>
+<status status="PASS" starttime="20250626 00:21:09.368" endtime="20250626 00:21:18.714"/>
+</test>
+<test id="s1-s1-s1-t3" name="Login With Blank Password" line="43">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>app=${APP}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>appWaitActivity=*.*</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20250626 00:21:18.716" endtime="20250626 00:21:25.602"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>accessibility_id=test-Username</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20250626 00:21:25.603" endtime="20250626 00:21:26.388"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>accessibility_id=test-Username</arg>
+<arg>standard_user</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20250626 00:21:26.390" level="INFO">Typing text 'standard_user' into text field 'accessibility_id=test-Username'</msg>
+<status status="PASS" starttime="20250626 00:21:26.389" endtime="20250626 00:21:26.985"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>accessibility_id=test-LOGIN</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20250626 00:21:26.990" level="INFO">Clicking element 'accessibility_id=test-LOGIN'.</msg>
+<status status="PASS" starttime="20250626 00:21:26.987" endtime="20250626 00:21:28.147"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='Password is required']</arg>
+<arg>5s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20250626 00:21:28.473" level="INFO">xpath criteria: //android.widget.TextView[@text='Password is required']</msg>
+<status status="PASS" starttime="20250626 00:21:28.147" endtime="20250626 00:21:28.473"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20250626 00:21:28.474" endtime="20250626 00:21:29.293"/>
+</kw>
+<status status="PASS" starttime="20250626 00:21:18.715" endtime="20250626 00:21:29.294"/>
+</test>
+<test id="s1-s1-s1-t4" name="Login With Empty Username And Password" line="61">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>app=${APP}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>appWaitActivity=*.*</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20250626 00:21:29.297" endtime="20250626 00:21:35.727"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>accessibility_id=test-LOGIN</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20250626 00:21:35.727" endtime="20250626 00:21:36.401"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>accessibility_id=test-LOGIN</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20250626 00:21:36.404" level="INFO">Clicking element 'accessibility_id=test-LOGIN'.</msg>
+<status status="PASS" starttime="20250626 00:21:36.402" endtime="20250626 00:21:36.567"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='Username is required']</arg>
+<arg>5s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20250626 00:21:37.507" level="INFO">xpath criteria: //android.widget.TextView[@text='Username is required']</msg>
+<status status="PASS" starttime="20250626 00:21:36.567" endtime="20250626 00:21:37.507"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20250626 00:21:37.507" endtime="20250626 00:21:41.066"/>
+</kw>
+<status status="PASS" starttime="20250626 00:21:29.297" endtime="20250626 00:21:41.067"/>
+</test>
+<status status="PASS" starttime="20250626 00:20:53.190" endtime="20250626 00:21:41.068"/>
+</suite>
+<suite id="s1-s1-s2" name="Positive Login" source="D:\Osi\Automation-robot\tests\login\positive_login.robot">
+<test id="s1-s1-s2-t1" name="Login With Valid Credentials" line="6">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>app=${APP}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>appWaitActivity=*.*</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20250626 00:21:41.078" endtime="20250626 00:21:52.007"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>accessibility_id=test-Username</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20250626 00:21:52.008" endtime="20250626 00:21:52.198"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>accessibility_id=test-Username</arg>
+<arg>standard_user</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20250626 00:21:52.200" level="INFO">Typing text 'standard_user' into text field 'accessibility_id=test-Username'</msg>
+<status status="PASS" starttime="20250626 00:21:52.198" endtime="20250626 00:21:52.802"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>accessibility_id=test-Password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20250626 00:21:52.805" level="INFO">Typing text 'secret_sauce' into text field 'accessibility_id=test-Password'</msg>
+<status status="PASS" starttime="20250626 00:21:52.803" endtime="20250626 00:21:54.140"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>accessibility_id=test-LOGIN</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20250626 00:21:54.142" level="INFO">Clicking element 'accessibility_id=test-LOGIN'.</msg>
+<status status="PASS" starttime="20250626 00:21:54.141" endtime="20250626 00:21:54.651"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="PRODUCTS"]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20250626 00:21:55.385" level="INFO">xpath criteria: //android.widget.TextView[@text="PRODUCTS"]</msg>
+<status status="PASS" starttime="20250626 00:21:54.653" endtime="20250626 00:21:55.385"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20250626 00:21:55.385" endtime="20250626 00:21:56.253"/>
+</kw>
+<status status="PASS" starttime="20250626 00:21:41.074" endtime="20250626 00:21:56.253"/>
+</test>
+<status status="PASS" starttime="20250626 00:21:41.070" endtime="20250626 00:21:56.254"/>
+</suite>
+<status status="PASS" starttime="20250626 00:20:53.189" endtime="20250626 00:21:56.255"/>
+</suite>
+<suite id="s1-s2" name="Logout" source="D:\Osi\Automation-robot\tests\logout">
+<suite id="s1-s2-s1" name="Logout" source="D:\Osi\Automation-robot\tests\logout\logout.robot">
+<test id="s1-s2-s1-t1" name="Logout From Products Page" line="6">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>app=${APP}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>appWaitActivity=*.*</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20250626 00:21:56.274" endtime="20250626 00:22:02.681"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>accessibility_id=test-Username</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20250626 00:22:02.682" endtime="20250626 00:22:03.553"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>accessibility_id=test-Username</arg>
+<arg>standard_user</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20250626 00:22:03.555" level="INFO">Typing text 'standard_user' into text field 'accessibility_id=test-Username'</msg>
+<status status="PASS" starttime="20250626 00:22:03.553" endtime="20250626 00:22:04.139"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>accessibility_id=test-Password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20250626 00:22:04.141" level="INFO">Typing text 'secret_sauce' into text field 'accessibility_id=test-Password'</msg>
+<status status="PASS" starttime="20250626 00:22:04.139" endtime="20250626 00:22:04.656"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>accessibility_id=test-LOGIN</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20250626 00:22:04.657" level="INFO">Clicking element 'accessibility_id=test-LOGIN'.</msg>
+<status status="PASS" starttime="20250626 00:22:04.657" endtime="20250626 00:22:05.304"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text="PRODUCTS"]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20250626 00:22:06.804" level="INFO">xpath criteria: //android.widget.TextView[@text="PRODUCTS"]</msg>
+<status status="PASS" starttime="20250626 00:22:05.305" endtime="20250626 00:22:06.804"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>accessibility_id=test-Menu</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20250626 00:22:06.806" level="INFO">Clicking element 'accessibility_id=test-Menu'.</msg>
+<status status="PASS" starttime="20250626 00:22:06.805" endtime="20250626 00:22:07.178"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>accessibility_id=test-LOGOUT</arg>
+<arg>5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20250626 00:22:07.179" endtime="20250626 00:22:08.853"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>accessibility_id=test-LOGOUT</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20250626 00:22:08.856" level="INFO">Clicking element 'accessibility_id=test-LOGOUT'.</msg>
+<status status="PASS" starttime="20250626 00:22:08.854" endtime="20250626 00:22:09.874"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>accessibility_id=test-LOGIN</arg>
+<arg>5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20250626 00:22:09.874" endtime="20250626 00:22:11.514"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>accessibility_id=test-LOGIN</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20250626 00:22:11.586" level="INFO">Current page contains element 'accessibility_id=test-LOGIN'.</msg>
+<status status="PASS" starttime="20250626 00:22:11.515" endtime="20250626 00:22:11.586"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20250626 00:22:11.587" endtime="20250626 00:22:12.460"/>
+</kw>
+<status status="PASS" starttime="20250626 00:21:56.274" endtime="20250626 00:22:12.460"/>
+</test>
+<status status="PASS" starttime="20250626 00:21:56.258" endtime="20250626 00:22:12.461"/>
+</suite>
+<status status="PASS" starttime="20250626 00:21:56.256" endtime="20250626 00:22:12.462"/>
+</suite>
+<status status="PASS" starttime="20250626 00:20:53.161" endtime="20250626 00:22:12.463"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="5" fail="0" skip="0" id="s1-s1" name="Login">Tests.Login</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s1-s1" name="Negative Login">Tests.Login.Negative Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s2" name="Positive Login">Tests.Login.Positive Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Logout">Tests.Logout</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2-s1" name="Logout">Tests.Logout.Logout</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
